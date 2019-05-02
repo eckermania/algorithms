@@ -1,6 +1,9 @@
 let wordPattern = function(pattern, string){
     let pattArr = pattern.split('');
     let strArr = string.split(' ');
+    if (pattArr.length !== strArr.length){
+      return false
+    } else {
     let container = [];
     let pattIndices = [];
     let strIndices = [];
@@ -24,3 +27,4 @@ let wordPattern = function(pattern, string){
     })
     return pattIndices.join('') === strIndices.join('');
   }
+}
